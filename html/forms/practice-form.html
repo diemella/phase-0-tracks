@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Andrew's Subs</title>
+</head>
+<body>
+  <h1>Andrew's Subs</h1>
+  <p>Order Form:</p>
+  <form action="success.html">
+    <fieldset>
+      <div>
+        <label>Name:</label>
+        <input type="text" name="custname">
+      </div>
+      <div>
+        <label>Phone Number:</label>
+        <input type="tel" name="custtel">
+      </div>
+      <div>
+        <label>Pick Up Time:</label>
+        <input type="time" name="pickuptime">
+      </div>
+    </fieldset>
+    <br>
+    <fieldset>
+      <div>
+        <label>Sandwich Selection:</label>
+        <select name="sandwiches">
+          <option value="chicken">Chicken Club</option>
+          <option value="meatballs">Meatballs</option>
+          <option value="knuckle">Knuckle</option>
+        </select>
+      </div>
+      <div>
+        <label>Additional Info:</label><br>
+        <textarea name="addinfo" rows="10" cols="30" placeholder="Ex: no nuts, no mayo"></textarea>
+      </div>
+      <button type="submit">Place Order</button>
+    </fieldset>
+  </form>
+</body>
+</html>
