@@ -22,7 +22,7 @@ section#contact-info p {
 
 /* We use the last-of-type selector
 to avoid the appearance of an extra
-border. */
+border.*/
 
 section#contact-info p:last-of-type {
   border-right: none;
