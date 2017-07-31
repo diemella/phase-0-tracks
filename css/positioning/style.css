@@ -13,3 +13,10 @@
   left:480px;
   z-index: 5;
 }
+
+#glasses {
+  position:absolute;
+  top:224px;
+  left:543px;
+  z-index: 1;
+}
