@@ -6,3 +6,10 @@
   margin:125px 500px;
   position: absolute;
 }
+
+#hat {
+  position:absolute;
+  top:75px;
+  left:480px;
+  z-index: 5;
+}
