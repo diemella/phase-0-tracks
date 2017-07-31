@@ -1,0 +1,22 @@
+.outfitted {
+  position: relative;
+}
+
+#octopus {
+  margin:125px 500px;
+  position: absolute;
+}
+
+#hat {
+  position:absolute;
+  top:75px;
+  left:480px;
+  z-index: 5;
+}
+
+#glasses {
+  position:absolute;
+  top:224px;
+  left:543px;
+  z-index: 1;
+}
