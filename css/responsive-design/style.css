@@ -50,3 +50,32 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+/* Use as example of media query:
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+
+*/
+
+@media screen and (max-width:500px) {
+  #external-links {
+    display:block;
+    vertical-align: unset;
+    width: 80%;
+    margin: auto;
+  }
+  main {
+    display:block;
+    vertical-align: unset;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    max-width: none;
+  }
+}
