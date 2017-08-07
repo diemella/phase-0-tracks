@@ -1,0 +1,18 @@
+Release 0: Equip Your New Robot
+Task: Using an elevator
+
+- Navigate to the elevator
+- Determine which floor level you're currently on
+- Decide which floor level you're going to
+- If the floor level you're going to is higher than the floor level you're currently on
+  - push the up arrow button
+- Otherwise
+  - push the down arrow button
+- Until the elevator door opens,
+    - if you've waited up to 1 minute and the elevator door is not open,
+      - repeat lines 7 through 10
+    - otherwise,
+      - enter the elevator since the elevator door is now open
+- While the elevator door closes, push the button to the floor level you're going to
+- Until the new current floor level is equal to the floor level you're going to,
+  - exit the elevator
