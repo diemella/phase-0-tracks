@@ -16,3 +16,23 @@ Task: Using an elevator
 - While the elevator door closes, push the button to the floor level you're going to
 - Until the new current floor level is equal to the floor level you're going to,
   - exit the elevator
+
+
+Release 1: Find A Real-Life Algorithm
+TASK: Taking a bubble bath.
+
+- Navigate to the bathroom
+- Plug the drain of the bath tub
+- Turn on the hot water tap of the bath tub
+- If water is too hot
+  - turn on the cold water tap until desired temperature is reached
+- Otherwise
+  - let water run so the water level could reach to 2/3 filled.
+- While the water level is less than 2/3 filled,
+  - add 1 cap-full of bubble bath soap, 2 bath bombs, and 10 drops of essential oil
+- Until the water level is 2/3 filled,
+  - turn off both water taps.
+- Remove clothing from body
+- Enter the bath tub
+- Until mood is relaxed,
+  - exit the bath tub
