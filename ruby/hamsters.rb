@@ -26,4 +26,16 @@ def hamster_santuary
     estimated_age = estimated_age.to_f
   end
 
+  puts "The hamster's name is #{hamster_name}."
+  puts "The hamster's volume_level is #{volume_level}."
+  puts "The hamster's fur color is #{fur_color}."
+  puts "The hamster is a good candidate for adoption: #{adoption}."
+  if estimated_age.class == Float
+    puts "The hamster's estimated_age is #{estimated_age}."
+  else
+    puts "The hamster's estimated age is unknown."
+  end
+
 end
+
+hamster_santuary
