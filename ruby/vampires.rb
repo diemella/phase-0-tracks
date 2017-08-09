@@ -30,3 +30,28 @@ else
 end
 
 puts "Employee age: #{employee_age}"
+
+# Garlic Code Block
+
+valid_garlic_input = false
+
+until valid_garlic_input === true
+
+  puts "Our company's cafeteria serves garlic bread. Should we   order some for you (y/n)?"
+  garlic_bread = gets.chomp
+  garlic_bread = garlic_bread.downcase
+
+  if garlic_bread == "y" || garlic_bread == "yes"
+    garlic_bread = true
+    valid_garlic_input = true
+  elsif garlic_bread == "n" || garlic_bread == "no"
+    garlic_bread = false
+    valid_garlic_input = true
+  else
+    puts "Please answer with 'y' or 'n'. "
+  end
+
+end
+
+puts "Response: #{garlic_bread}"
+
