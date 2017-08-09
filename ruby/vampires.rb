@@ -55,3 +55,27 @@ end
 
 puts "Response: #{garlic_bread}"
 
+# Insurance Code Block
+
+valid_ins_input = false
+
+until valid_ins_input === true
+
+  puts "Would you like to enroll in the company's health insurance?"
+  health_ins = gets.chomp
+  health_ins = health_ins.downcase
+
+  if health_ins == "y" || health_ins == "yes"
+    health_ins = true
+    valid_ins_input = true
+  elsif health_ins == "n" || health_ins == "no"
+    health_ins = false
+    valid_ins_input = true
+  else
+    puts "Please answer with 'y' or 'n'. "
+  end
+
+end
+
+puts "Response: #{health_ins}"
+
