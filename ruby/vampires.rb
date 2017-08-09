@@ -79,3 +79,24 @@ end
 
 puts "Response: #{health_ins}"
 
+
+# Detection Logic
+
+if (employee_name != "drake cula" && employee_name != "tu fang") && employee_age == true && garlic_bread == true && health_ins == true
+  result = "Probably not a vampire."
+
+elsif (employee_name != "drake cula" && employee_name != "tu fang") && employee_age == false && (garlic_bread == false || health_ins == false)
+  result = "Probably a vampire."
+
+elsif (employee_name != "drake cula" && employee_name != "tu fang") && employee_age == false && garlic_bread == false && health_ins == false
+  result = "Almost certainly a vampire."
+
+elsif employee_name == "drake cula" || employee_name == "tu fang"
+  result = "Definitely a vampire."
+
+else
+  result = "Results inclusive."
+
+end
+
+puts "Results: #{result}"
