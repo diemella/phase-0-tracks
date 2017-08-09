@@ -9,28 +9,28 @@ until num_employees == 0
 
   puts "What is your name?"
   employee_name = gets.chomp
-  employee_name = employee_name.  downcase
+  employee_name = employee_name.downcase
   puts "Response: #{employee_name}"
 
   # Age Code Block
 
   puts "How old are you?"
   employee_age_given = gets.chomp
-  employee_age_given =   employee_age_given.to_i
-  puts "Response: #{employee_age_given  }"
+  employee_age_given = employee_age_given.to_i
+  puts "Response: #{employee_age_given}"
 
   puts "What year were you born?"
   employee_birth_year = gets.chomp
-  employee_birth_year =   employee_birth_year.to_i
-  puts "Response: #{  employee_birth_year}"
+  employee_birth_year = employee_birth_year.to_i
+  puts "Response: #{employee_birth_year}"
 
   current_year = 2017
-  employee_age_calculated =   current_year - employee_birth_year
-  puts "Calculated age: #{  employee_age_calculated}"
+  employee_age_calculated = current_year - employee_birth_year
+  puts "Calculated age: #{employee_age_calculated}"
 
   if employee_age_given > 150
     employee_age = false
-  elsif (employee_age_given !=   employee_age_calculated) && (   employee_age_given !=   employee_age_calculated - 1)
+  elsif (employee_age_given != employee_age_calculated) && (employee_age_given != employee_age_calculated - 1)
     employee_age = false
   else
     employee_age = true
@@ -42,16 +42,16 @@ until num_employees == 0
 
   valid_garlic_input = false
 
-  until valid_garlic_input === true
+  until valid_garlic_input == true
 
-    puts "Our company's cafeteria   serves garlic bread. Should   we   order some for you (y/n)?"
+    puts "Our company's cafeteria serves garlic bread. Should we order some for you (y/n)?"
     garlic_bread = gets.chomp
-    garlic_bread = garlic_bread.  downcase
+    garlic_bread = garlic_bread.downcase
 
-    if garlic_bread == "y" ||   garlic_bread == "yes"
+    if garlic_bread == "y" || garlic_bread == "yes"
       garlic_bread = true
       valid_garlic_input = true
-    elsif garlic_bread == "n" ||   garlic_bread == "no"
+    elsif garlic_bread == "n" || garlic_bread == "no"
       garlic_bread = false
       valid_garlic_input = true
     else
@@ -66,7 +66,7 @@ until num_employees == 0
 
   valid_ins_input = false
 
-  until valid_ins_input === true
+  until valid_ins_input == true
 
     puts "Would you like to enroll in   the company's health insurance?"
     health_ins = gets.chomp
@@ -86,19 +86,39 @@ until num_employees == 0
 
   puts "Response: #{health_ins}"
 
+  # Allergies Code Block
+
+  valid_allergies_input = false
+
+  until valid_allergies_input == true
+
+    puts "Name any allergies you have, one at a time. Type 'done' when finished."
+    allergies = gets.chomp
+    allergies = allergies.downcase
+
+    if allergies == "sunshine"
+      allergies = true
+      valid_allergies_input = true
+    elsif allergies == "done"
+      valid_allergies_input = true
+    else
+      puts "Name another allergy you have, one at a time. Type 'done' when finished."
+    end
+
+  end
 
   # Detection Logic
 
-  if (employee_name != "drake cula" &&   employee_name != "tu fang") &&   employee_age == true &&   garlic_bread == true && health_ins   == true
+  if (employee_name != "drake cula" && employee_name != "tu fang") &&   employee_age == true && garlic_bread == true && health_ins == true
     result = "Probably not a vampire."
 
-  elsif (employee_name != "drake cula"   && employee_name != "tu fang") &&   employee_age == false && (  garlic_bread == false ||   health_ins == false)
+  elsif (employee_name != "drake cula" && employee_name != "tu fang") &&   employee_age == false && (garlic_bread == false || health_ins == false)
     result = "Probably a vampire."
 
-  elsif (employee_name != "drake cula"   && employee_name != "tu fang") &&   employee_age == false &&   garlic_bread == false &&   health_ins == false
+  elsif (employee_name != "drake cula" && employee_name != "tu fang") &&   employee_age == false && garlic_bread == false && health_ins == false
     result = "Almost certainly a   vampire."
 
-  elsif employee_name == "drake cula"   || employee_name == "tu fang"
+  elsif employee_name == "drake cula" || employee_name == "tu fang"
     result = "Definitely a vampire."
 
   else
