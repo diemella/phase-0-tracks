@@ -102,7 +102,7 @@ until num_employees == 0
     elsif allergies == "done"
       valid_allergies_input = true
     else
-      puts "Name another allergy you have, one at a time. Type 'done' when finished."
+      valid_allergies_input = false
     end
 
   end
