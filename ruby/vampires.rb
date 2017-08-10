@@ -109,7 +109,10 @@ until num_employees == 0
 
   # Detection Logic
 
-  if (employee_name != "drake cula" && employee_name != "tu fang") &&  employee_age == true && garlic_bread == true && health_ins == true
+  if (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == true && garlic_bread == true && health_ins == true && allergies == true)
+    result = "Probably a vampire."
+
+  elsif (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == true && garlic_bread == true && health_ins == true)
     result = "Probably not a vampire."
 
   elsif (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == false && garlic_bread == true && health_ins == false)
@@ -121,7 +124,7 @@ until num_employees == 0
   elsif (employee_name != "drake cula" && employee_name != "tu fang") &&   employee_age == false && garlic_bread == false && health_ins == false
     result = "Almost certainly a vampire."
 
-  elsif employee_name == "drake cula" || employee_name == "tu fang"
+  elsif (employee_name == "drake cula" || employee_name == "tu fang")
     result = "Definitely a vampire."
 
   else
