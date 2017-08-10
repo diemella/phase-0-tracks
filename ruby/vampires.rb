@@ -112,7 +112,10 @@ until num_employees == 0
   if (employee_name != "drake cula" && employee_name != "tu fang") &&  employee_age == true && garlic_bread == true && health_ins == true
     result = "Probably not a vampire."
 
-  elsif (employee_name != "drake cula" && employee_name != "tu fang") &&   employee_age == false && (garlic_bread == false || health_ins == false)
+  elsif (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == false && garlic_bread == true && health_ins == false)
+    result = "Probably a vampire."
+
+  elsif (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == false && garlic_bread == false && health_ins == true)
     result = "Probably a vampire."
 
   elsif (employee_name != "drake cula" && employee_name != "tu fang") &&   employee_age == false && garlic_bread == false && health_ins == false
