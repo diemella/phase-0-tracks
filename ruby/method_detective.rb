@@ -20,11 +20,12 @@
 "the usual".ljust(18, " suspects")
 #=> "the usual suspects"
 
-p " suspects".insert(0, "the usual")
-p " suspects".rjust(18, "the usual")
+" suspects".insert(0, "the usual")
+" suspects".rjust(18, "the usual")
 # => "the usual suspects"
 
 # "The case of the disappearing last letter".<???>
+"The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
 # "The mystery of the missing first letter".<???>
