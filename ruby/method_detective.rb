@@ -35,9 +35,11 @@
 "Elementary,    my   dear        Watson!".squeeze
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
+# REVISIT
+p "z".each_byte { |c| print c, ' ' }
+p "z".each_codepoint { |c| print c, ' ' }
 # => 122
 # (What is the significance of the number 122 in relation to the character z?)
 
-# "How many times does the letter 'a' appear in this string?".<???>
+"How many times does the letter 'a' appear in this string?".count "a"
 # => 4
