@@ -35,11 +35,9 @@
 "Elementary,    my   dear        Watson!".squeeze
 # => "Elementary, my dear Watson!"
 
-# REVISIT
-p "z".each_byte { |c| print c, ' ' }
-p "z".each_codepoint { |c| print c, ' ' }
+"z".getbyte(0)
 # => 122
-# (What is the significance of the number 122 in relation to the character z?)
+# What is the significance of the number 122 in relation to the character z? ==> The ASCII code for lowercase z is 122.
 
 "How many times does the letter 'a' appear in this string?".count "a"
 # => 4
