@@ -20,7 +20,8 @@
 "the usual".ljust(18, " suspects")
 #=> "the usual suspects"
 
-# " suspects".<???>
+p " suspects".insert(0, "the usual")
+p " suspects".rjust(18, "the usual")
 # => "the usual suspects"
 
 # "The case of the disappearing last letter".<???>
