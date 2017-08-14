@@ -56,3 +56,33 @@ puts client_info
 
 puts "Which of the following client's information would you like to update: name, age, children, vegan, or theme? (If none, type 'none'.)"
 update_key = gets.chomp
+
+  if update_key == "none"
+    puts "You've completed inputting data for this client!"
+  elsif update_key == "theme" || update_key == "name"
+    update_key = update_key.to_sym
+    puts "Enter the new value for #{update_key}: "
+    new_value = gets.chomp
+    client_info[update_key] = new_value
+  elsif update_key == "age" || update_key == "children"
+    update_key = update_key.to_sym
+    puts "Enter the new value for #{update_key}: "
+    new_value = gets.chomp.to_i
+    client_info[update_key] = new_value
+  elsif update_key == "vegan"
+    update_key = update_key.to_sym
+    puts "Is this client a vegan (y/n)?"
+    new_value = gets.chomp.downcase
+    if new_value == "y" || new_value == "yes"
+      new_value = true
+    elsif new_value == "n" || new_value == "no"
+      new_value = false
+    else
+      new_value = nil
+    end
+    client_info[update_key] = new_value
+  else
+    puts "There is no field for #{update_key}."
+  end
+
+p client_info
