@@ -37,4 +37,15 @@ num_of_children = gets.chomp
   end
 client_info[:children] = num_of_children
 
+puts "Is this client a vegan (y/n)?"
+vegan_input = gets.chomp.downcase
+if vegan_input == "y" || vegan_input == "yes"
+  vegan_value = true
+elsif vegan_input == "n" || vegan_input == "no"
+  vegan_value = false
+else
+  vegan_value = nil
+end
+client_info[:vegan] = vegan_value
+
 p client_info
