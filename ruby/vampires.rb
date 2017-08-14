@@ -24,7 +24,8 @@ until num_employees == 0
   employee_birth_year = employee_birth_year.to_i
   puts "Response: #{employee_birth_year}"
 
-  current_year = Times.now
+
+  current_year = Time.now.year
   employee_age_calculated = current_year - employee_birth_year
   puts "Calculated age: #{employee_age_calculated}"
 
@@ -42,7 +43,7 @@ until num_employees == 0
 
   valid_garlic_input = false
 
-  until valid_garlic_input == true
+  until valid_garlic_input
 
     puts "Our company's cafeteria serves garlic bread. Should we order some for you (y/n)?"
     garlic_bread = gets.chomp
@@ -66,7 +67,7 @@ until num_employees == 0
 
   valid_ins_input = false
 
-  until valid_ins_input == true
+  until valid_ins_input
 
     puts "Would you like to enroll in   the company's health insurance?"
     health_ins = gets.chomp
@@ -90,7 +91,7 @@ until num_employees == 0
 
   valid_allergies_input = false
 
-  until valid_allergies_input == true
+  until valid_allergies_input
 
     puts "Name any allergies you have, one at a time. Type 'done' when finished."
     allergies = gets.chomp
