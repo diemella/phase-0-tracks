@@ -54,3 +54,5 @@ client_info[:theme] = theme_input
 
 puts client_info
 
+puts "Which of the following client's information would you like to update: name, age, children, vegan, or theme? (If none, type 'none'.)"
+update_key = gets.chomp
