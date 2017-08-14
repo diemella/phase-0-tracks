@@ -24,7 +24,7 @@ until num_employees == 0
   employee_birth_year = employee_birth_year.to_i
   puts "Response: #{employee_birth_year}"
 
-  current_year = 2017
+  current_year = Times.now
   employee_age_calculated = current_year - employee_birth_year
   puts "Calculated age: #{employee_age_calculated}"
 
