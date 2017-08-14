@@ -52,4 +52,5 @@ puts "What is the client's preferred decor theme?"
 theme_input = gets.chomp
 client_info[:theme] = theme_input
 
-p client_info
+puts client_info
+
