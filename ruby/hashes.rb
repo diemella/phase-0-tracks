@@ -58,7 +58,7 @@ puts "Which of the following client's information would you like to update: name
 update_key = gets.chomp
 
   if update_key == "none"
-    puts "You've completed inputting data for this client!"
+    puts "You've chosen not to update client's info!"
   elsif update_key == "theme" || update_key == "name"
     update_key = update_key.to_sym
     puts "Enter the new value for #{update_key}: "
@@ -85,4 +85,4 @@ update_key = gets.chomp
     puts "There is no field for #{update_key}."
   end
 
-p client_info
+puts client_info
