@@ -30,11 +30,11 @@ client_info[:age] = client_age
 
 puts "How many children do the client have (if none, type 'none')?"
 num_of_children = gets.chomp
-  if num_of_children == "none"
-    num_of_children = NIL
-  else
-    num_of_children = num_of_children.to_i
-  end
+if num_of_children == "none"
+  num_of_children = NIL
+else
+  num_of_children = num_of_children.to_i
+end
 client_info[:children] = num_of_children
 
 puts "Is this client a vegan (y/n)?"
@@ -47,5 +47,9 @@ else
   vegan_value = nil
 end
 client_info[:vegan] = vegan_value
+
+puts "What is the client's preferred decor theme?"
+theme_input = gets.chomp
+client_info[:theme] = theme_input
 
 p client_info
