@@ -28,4 +28,13 @@ puts "How old is the client?"
 client_age = gets.chomp.to_i
 client_info[:age] = client_age
 
+puts "How many children do the client have (if none, type 'none')?"
+num_of_children = gets.chomp
+  if num_of_children == "none"
+    num_of_children = NIL
+  else
+    num_of_children = num_of_children.to_i
+  end
+client_info[:children] = num_of_children
+
 p client_info
