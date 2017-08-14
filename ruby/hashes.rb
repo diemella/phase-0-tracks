@@ -9,7 +9,14 @@
 
   # print hash to screen when completed
 
-  # prompt designer to update info (no loops - just once)
-  # if designer enters "none", skip the update (print message to screen); otherwise, convert input to appropriate type (string to symbol) then prompt user to enter updated value for key and update the key with new value.
+  # prompt designer/user to update info (no loops - just once)
+  # if designer/user enters "none", skip the update (print message to screen); otherwise, convert input to appropriate type (string to symbol) then prompt designer/user to enter updated value for key and update the key with new value.
 
   # print updated hash to screen and exit program
+
+
+
+
+
+client_info = {}
+p client_info
