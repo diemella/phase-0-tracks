@@ -19,4 +19,9 @@
 
 
 client_info = {}
+
+puts "What is the client's name?"
+client_name = gets.chomp
+client_info[:name] = client_name
+
 p client_info
