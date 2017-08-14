@@ -1,0 +1,15 @@
+# PSEUDOCODE
+
+  # create empty hash
+
+  # for each field of data (client's name -- string, age -- integer, number of children -- integer, vegan? -- boolean), decor theme -- string):
+    # prompt designer/user to answer provide input
+    # convert each input into appropriate data type
+    # pass each converted input into the corresponding keys in hash (use symbols for keys)
+
+  # print hash to screen when completed
+
+  # prompt designer to update info (no loops - just once)
+  # if designer enters "none", skip the update (print message to screen); otherwise, convert input to appropriate type (string to symbol) then prompt user to enter updated value for key and update the key with new value.
+
+  # print updated hash to screen and exit program
