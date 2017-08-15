@@ -111,27 +111,50 @@ until num_employees == 0
 
   # Detection Logic
 
-  if (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == true && garlic_bread == true && health_ins == true && allergies == true)
-    result = "Probably a vampire."
+  # OLD LOGIC
 
-  elsif (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == true && garlic_bread == true && health_ins == true)
-    result = "Probably not a vampire."
+  # if (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == true && garlic_bread == true && health_ins == true && allergies == true)
+  #   result = "Probably a vampire."
 
-  elsif (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == false && garlic_bread == true && health_ins == false)
-    result = "Probably a vampire."
+  # elsif (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == true && garlic_bread == true && health_ins == true)
+  #   result = "Probably not a vampire."
 
-  elsif (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == false && garlic_bread == false && health_ins == true)
-    result = "Probably a vampire."
+  # elsif (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == false && garlic_bread == true && health_ins == false)
+  #   result = "Probably a vampire."
 
-  elsif (employee_name != "drake cula" && employee_name != "tu fang") &&   employee_age == false && garlic_bread == false && health_ins == false
-    result = "Almost certainly a vampire."
+  # elsif (employee_name != "drake cula" && employee_name != "tu fang") && (employee_age == false && garlic_bread == false && health_ins == true)
+  #   result = "Probably a vampire."
 
-  elsif (employee_name == "drake cula" || employee_name == "tu fang")
-    result = "Definitely a vampire."
+  # elsif (employee_name != "drake cula" && employee_name != "tu fang") &&   employee_age == false && garlic_bread == false && health_ins == false
+  #   result = "Almost certainly a vampire."
 
+  # elsif (employee_name == "drake cula" || employee_name == "tu fang")
+  #   result = "Definitely a vampire."
+
+  # else
+  #   result = "Results inclusive."
+
+  # end
+
+
+  # IMPROVED LOGIC
+
+  if employee_age && garlic_bread && health_ins
+    result = 'Probably not a vampire.'
   else
-    result = "Results inclusive."
+    result = "Results inconclusive."
+  end
 
+  if (!employee_age && (!garlic_bread || !health_ins)) || allergies
+   result = 'Probably a vampire.'
+  end
+
+  if !employee_age && !garlic_bread && !health_ins
+    result = 'Almost certainly a vampire.'
+  end
+
+  if employee_name == "drake cula" || employee_name == "tu fang"
+    result = 'Definitely a vampire.'
   end
 
   puts "Results: #{result}"
