@@ -101,6 +101,7 @@ until num_employees == 0
       allergies = true
       valid_allergies_input = true
     elsif allergies == "done"
+      allergies = false
       valid_allergies_input = true
     else
       valid_allergies_input = false
