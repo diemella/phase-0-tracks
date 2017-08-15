@@ -3,31 +3,31 @@
 puts "How many employees will be processed?"
 num_employees = gets.chomp
 num_employees = num_employees.to_i
-puts "Response: #{num_employees}"
+# puts "Response: #{num_employees}"
 
 until num_employees == 0
 
   puts "What is your name?"
   employee_name = gets.chomp
   employee_name = employee_name.downcase
-  puts "Response: #{employee_name}"
+  # puts "Response: #{employee_name}"
 
   # Age Code Block
 
   puts "How old are you?"
   employee_age_given = gets.chomp
   employee_age_given = employee_age_given.to_i
-  puts "Response: #{employee_age_given}"
+  # puts "Response: #{employee_age_given}"
 
   puts "What year were you born?"
   employee_birth_year = gets.chomp
   employee_birth_year = employee_birth_year.to_i
-  puts "Response: #{employee_birth_year}"
+  # puts "Response: #{employee_birth_year}"
 
 
   current_year = Time.now.year
   employee_age_calculated = current_year - employee_birth_year
-  puts "Calculated age: #{employee_age_calculated}"
+  # puts "Calculated age: #{employee_age_calculated}"
 
   if employee_age_given > 150
     correct_age = false
@@ -37,7 +37,7 @@ until num_employees == 0
     correct_age = true
   end
 
-  puts "Employee age: #{correct_age}"
+  # puts "Employee age: #{correct_age}"
 
   # Garlic Code Block
 
@@ -61,7 +61,7 @@ until num_employees == 0
 
   end
 
-  puts "Response: #{likes_garlic}"
+  # puts "Response: #{likes_garlic}"
 
   # Insurance Code Block
 
@@ -85,7 +85,7 @@ until num_employees == 0
 
   end
 
-  puts "Response: #{wants_ins}"
+  # puts "Response: #{wants_ins}"
 
   # Allergies Code Block
 
