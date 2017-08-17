@@ -86,3 +86,31 @@ def alias_generator (real_name)
 end
 
 # p alias_generator("Felicia Torres") == "Vussit Gimodoe"
+
+
+
+# DRIVER CODE
+
+agents_directory = {}
+
+valid_input = false
+
+until valid_input
+
+  puts "What is your name? Type 'quit' when done."
+  name_input = gets.chomp
+
+  if name_input == "quit" || name_input == "Quit" || name_input == "QUIT"
+    valid_input = true
+  else
+    p "Your alias is: #{alias_generator(name_input)}"
+    agents_directory[name_input] = alias_generator(name_input)
+  end
+
+end
+
+p agents_directory
+
+agents_directory.each do |key, value|
+  puts "#{value} is actually #{key}."
+end
