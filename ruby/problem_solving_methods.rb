@@ -103,4 +103,45 @@ p fib(100).last == 218922995834555169026
 
 
 
+#=======================================================================#
 
+
+# PSEUDOCODE
+
+# Take an array of integers.
+# Determine the number of pass (length of array - 1)
+# For each pass, compare with the first two adjacent integers. Swap the integers if out of order. Then, compare the next adjacent integers and swap, if needed, until the last two integers are compared.
+# Repeat until no swap is needed.
+
+
+
+# METHOD
+
+def bubble_sort(arr)
+  num_of_pass = arr.length - 1
+  loop do
+    swapped = false
+
+    num_of_pass.times do |i|
+      if arr[i] > arr[i+1]
+        arr[i], arr[i+1] = arr[i+1], arr[i]
+        swapped = true
+      end
+      # p arr
+    end
+
+    if swapped == false
+      break
+    end
+
+  end
+  arr
+end
+
+
+
+# DRIVER CODE
+
+arr = [ 15, 2, 4, 32, 7, 9]
+
+p bubble_sort(arr)
