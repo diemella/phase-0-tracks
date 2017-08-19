@@ -35,4 +35,72 @@ p search_array(our_array, 47)
 
 # search_array(our_array, int)
 
-#-------------------------------------------------------------------
+#=======================================================================#
+
+
+# Fibonacci Calculator
+
+
+
+# -----------------------------
+
+# [0,1,1,2,3,5...]
+#  1,2,3,4,5,6...
+
+# fib(1) = 0
+# fib(2) = 1
+# fib(3) = fib(3-1) + fib(3-2)
+# fib(4) = fib(4-1) + fib(4-2)
+# fib(5) = fib(5-1) + fib(5-2)
+# fib(6) = fib(6-1) + fib(6-2)
+
+# fib(n) = fib(n-1) + fib(n-2)
+
+# -----------------------------
+
+# PSEUDOCODE
+
+# array = [0,1,1,2,3,5]
+# array.length  => should return 6
+
+# declare an array with first two integers (0 and 1)
+
+# access the last two integers:
+  # array[array.length - 1] and array[array.length - 2]
+
+# add the two integers:
+  # array[array.length -1] + array[array.length -2]
+
+# shovel it into the array like so:
+  # array << [array.length -1] + array[array.length -2]
+
+#-----------------------------
+
+# METHOD
+
+def fib(n)
+
+  fib_seq = [0, 1]
+
+  while n > 2
+    fib_seq << fib_seq[fib_seq.length - 1] + fib_seq[fib_seq.length - 2]
+    n -= 1
+  end
+
+  return fib_seq
+
+end
+
+#-----------------------------
+
+# DRIVER CODE
+
+p fib(6)
+# => [0, 1, 1, 2, 3, 5]
+
+p fib(100).last == 218922995834555169026
+# => true
+
+
+
+
