@@ -1,7 +1,7 @@
 class Santa
 
   def initialize
-    p "Initializing Santa instance..."
+    puts "Initializing Santa instance..."
   end
 
   def speak
@@ -16,6 +16,6 @@ end
 
 # TEST CODE
 
-chris = Santa.new
-chris.speak
-chris.eat_milk_and_cookies("snickerdoodle")
+santa = Santa.new
+santa.speak
+santa.eat_milk_and_cookies("snickerdoodle")
