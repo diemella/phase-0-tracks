@@ -41,20 +41,38 @@ end
 
 # Refactoring Attempt | Diverse Initialization:
 
+# santas = []
+
+# gender_ethnicity = {
+#   "agender" => "black",
+#   "female" => "Latino",
+#   "bigender" => "white",
+#   "male" => "Japanese",
+#   "female" => "prefer not to say",
+#   "gender fluid" => "Mystical Creature (unicorn)",
+#   "N/A" => "N/A",
+# }
+
+# gender_ethnicity["female"] = "Latino"
+# gender_ethnicity["transgender"] = "Jew"
+# gender_ethnicity["male"] = "Irish"
+
+# gender_ethnicity.each do |gender,ethnicity|
+#   santas << Santa.new(gender,ethnicity)
+# end
+
+# p santas
+
 santas = []
 
-gender_ethnicity = {
-  "agender" => "black",
-  "female" => "Latino",
-  "bigender" => "white",
-  "male" => "Japanese",
-  "female" => "prefer not to say",
-  "gender fluid" => "Mystical Creature (unicorn)",
-  "N/A" => "N/A"
-}
+genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-gender_ethnicity.each do |gender,ethnicity|
-  santas << Santa.new(gender,ethnicity)
+genders.push("transgender", "male")
+ethnicities.push("Vietnamese", "Irish")
+
+genders.length.times do |index|
+  santas << Santa.new(genders[index], ethnicities[index])
 end
 
 p santas
