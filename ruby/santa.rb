@@ -5,7 +5,7 @@ class Santa
   end
 
   def speak
-    puts "Ho, ho, ho!"
+    puts "Ho, ho, ho! Haaaappy holidays!"
   end
 
   def eat_milk_and_cookies(cookie_type)
@@ -13,3 +13,9 @@ class Santa
   end
 
 end
+
+# TEST CODE
+
+chris = Santa.new
+chris.speak
+chris.eat_milk_and_cookies("snickerdoodle")
