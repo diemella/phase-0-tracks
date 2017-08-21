@@ -25,3 +25,13 @@ module Shout
     words + " :)" + " !"
   end
 end
+
+# Classes Declaration
+
+class Coach
+ #
+end
+
+class Parent
+ #
+end
