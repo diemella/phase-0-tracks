@@ -16,13 +16,39 @@ class Santa
     puts "That was a good #{cookie_type}!"
   end
 
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
+
+  def celebrate_birthday
+    @age += 1
+  end
+
+  def get_mad_at(reindeer_name)
+    @reindeer_ranking.delete(reindeer_name)
+    @reindeer_ranking.insert(-1, reindeer_name)
+  end
+
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
 end
 
 # TEST CODE
 
-# santa = Santa.new
-# santa.speak
-# santa.eat_milk_and_cookies("snickerdoodle")
+p santa = Santa.new("male", "Jewish")
+# p santa.speak
+# p santa.eat_milk_and_cookies("snickerdoodle")
+p santa.celebrate_birthday
+p santa.get_mad_at("Vixen")
+p santa.gender=("female")
+p santa.age
+p santa.ethnicity
 
 
 #  Initialization Code from Release:
@@ -75,4 +101,4 @@ genders.length.times do |index|
   santas << Santa.new(genders[index], ethnicities[index])
 end
 
-p santas
+# p santas
