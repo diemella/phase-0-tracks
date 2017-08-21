@@ -1,3 +1,5 @@
+# SantaCon Simulator
+
 class Santa
 
   attr_reader :ethnicity, :reindeer_ranking
@@ -46,6 +48,10 @@ class Santa
 
 end
 
+
+# ---------------------------------------------
+
+
 # TEST CODE
 
 # p santa = Santa.new("male", "Jewish")
@@ -56,6 +62,9 @@ end
 # p santa.gender=("female")
 # p santa.age
 # p santa.ethnicity
+
+
+# ---------------------------------------------
 
 
 #  Initialization Code from Release:
@@ -72,7 +81,10 @@ end
 # p santas
 
 
-# Refactoring Attempt | Diverse Initialization:
+# ---------------------------------------------
+
+
+# Failed refactoring attempt using hash:
 
 # santas = []
 
@@ -96,12 +108,16 @@ end
 
 # p santas
 
+
 # ---------------------------------------------
+
 
 # santas = []
 
 # genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 # ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+# Adding diverse initializing data to arrays:
 
 # genders.push("transgender", "male")
 # ethnicities.push("Vietnamese", "Irish")
@@ -113,24 +129,29 @@ end
 # p santas
 
 
-# Build Many, Many Santas (100)
+# ---------------------------------------------
+
+
+# Build Many, Many Santas
 
 # declare array of genders
-genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-
 # declare array of ethnicity
-ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-
 # create an empty array to hold santas
-santas = []
-
 # assign 0 to santas_count
-santas_count = 0
-
 # until there are 100 santas,
   # push randomly selected gender and ethnicity to create an instance of santa into santas array
   # increment by 1
   # set new santa's age to a random number between 0 - 140 (move :age to attr_accessor)
+# print out the attributes of each santa using the instance methods that you give access to that data
+
+
+genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+
+ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+santas = []
+
+santas_count = 0
 
 until santas_count == 100
   santas << santa = Santa.new(genders.sample, ethnicities.sample)
@@ -140,7 +161,6 @@ end
 
 # p santas
 
-# print out the attributes of each santa using the instance methods that you give access to that data
 
 puts "Testing each Santa instance in the array: "
 
