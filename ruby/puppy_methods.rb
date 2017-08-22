@@ -33,3 +33,38 @@ puppy.speak(3)
 puppy.roll_over
 p puppy.dog_years(2)
 puppy.sit
+
+
+
+class Monkey
+
+  def initialize
+    puts "Initializing new monkey instance ..."
+  end
+
+  def speak(int)
+    puts "Ooo Ooo Ahh Ahh " * int
+  end
+
+  def eats_banana
+    puts "*eats banana*"
+  end
+
+end
+
+sam = Monkey.new
+sam.speak(4)
+sam.eats_banana
+
+
+all_monkeys = []
+instances = 0
+while instances < 50
+  all_monkeys << Monkey.new
+  instances += 1
+end
+
+all_monkeys.each do |monkey|
+  monkey.speak(2)
+  monkey.eats_banana
+end
