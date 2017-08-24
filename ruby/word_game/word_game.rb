@@ -39,6 +39,9 @@
 
 class WordGame
 
+  attr_reader :game_over
+  attr_accessor :word, :guess_count
+
   def initialize(word)
     @word = word
     @guess_count = 0
@@ -73,3 +76,48 @@ class WordGame
   end
 
 end
+
+# USER INTERFACE
+
+puts "Welcome to my Word Guessing Game!"
+
+puts "Player 1: Give a word for Player 2 to guess."
+word = gets.chomp.downcase
+
+game = WordGame.new(word)
+
+game.guess_count
+
+puts "Player 2: You have #{word.length - game.guess_count} guess(es)."
+print "The word to guess is: "
+
+guessed_letters = []
+
+game.check_letter(guessed_letters)
+
+until game.guess_count == word.length
+  puts "These are your guesses: #{guessed_letters}."
+  puts "Player 2: Take a guess, one letter at a time."
+  letter = gets.chomp.downcase.squeeze
+
+  if word.include? letter
+    game.guess_count += 1 unless guessed_letters.include? letter
+    guessed_letters << letter unless guessed_letters.include? letter
+
+  else
+    if !guessed_letters.include? letter
+      guessed_letters << letter
+      game.guess_count += 1
+    end
+
+  end
+
+  guessed_word = game.check_letter(guessed_letters)
+
+  puts "You have #{word.length - game.guess_count} guesses left."
+
+  game.game_over(guessed_word)
+
+end
+
+puts "Thanks for playing!"
