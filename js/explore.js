@@ -20,5 +20,16 @@ function reverse(str){
 
 // TEST CODE
 
-console.log(reverse('hello'));
-//expect 'olleh'
+// console.log(reverse('hello'));
+// //expect 'olleh'
+
+
+// DRIVER CODE
+
+var myRevStr = reverse('Diem');
+
+if (1===1 && 2 > 0) {
+  console.log(myRevStr);
+} else {
+  console.log('Something has gone wrong!');
+}
