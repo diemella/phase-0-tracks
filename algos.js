@@ -77,6 +77,27 @@ function findMatch(objOne,objTwo) {
 
 }
 
+// Release 2 -----
+
+function randomWords(int) {
+  var my_array = [];
+
+  for(a = 0; a < int; a ++) {
+   var ranWord = "";
+    var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    var ranLength = Math.floor(Math.random()*10) + 1;
+
+    while (ranWord.length < ranLength){
+      ranWord += alphabet.charAt(Math.floor(Math.random()*alphabet.length));
+    }
+
+    my_array.push(ranWord);
+  }
+
+  return my_array;
+}
+
+
 // DRIVER CODE
 
 // Release 0 -----
@@ -101,3 +122,8 @@ var objSeven = {animal: "Dog", legs: 4};
 var objEight = {animal: "Cat", legs: 3};
 
 console.log(findMatch(objSeven, objEight));
+
+
+// Release 2 -----
+
+console.log(randomWords(3));
