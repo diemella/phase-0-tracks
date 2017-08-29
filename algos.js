@@ -12,6 +12,18 @@
 // return current longest
 
 
+
+// Release 1 : Find a Key-Value Match
+
+// PSEUDOCODE for Release 1
+
+//FOR each property in first object, look FOR each property in second object...
+  //IF the value of the first object's first property matches the value of the second object's first property OR if the value of the first object's second property matches the value of the second object's second property,
+    //return true
+  // otherwise,
+    //return false
+
+
 // FUNCTION
 
 function findLongest(arr) {
@@ -27,6 +39,7 @@ function findLongest(arr) {
 }
 
 // DRIVER CODE
+
 
 var test_arr = ["long phrase","word", "longer phrase","longest phrase", "a phrase"];
 
