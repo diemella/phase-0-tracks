@@ -24,7 +24,7 @@
     //return false
 
 
-// FUNCTION
+// FUNCTIONS
 
 function findLongest(arr) {
   var current_longest = "";
@@ -38,9 +38,44 @@ function findLongest(arr) {
   return current_longest;
 }
 
+
+
+function findMatch(objOne,objTwo) {
+
+  for (var propertyOne in objOne) {
+    for (var propertyTwo in objTwo) {
+      if (objOne[propertyOne] === objTwo[propertyOne] || objOne[propertyTwo] === objTwo[propertyTwo]){
+        result = true;
+      } else {
+        result = false;
+      }
+    }
+    return result;
+  }
+
+}
+
 // DRIVER CODE
 
+// Release 0 -----
 
 var test_arr = ["long phrase","word", "longer phrase","longest phrase", "a phrase"];
 
 console.log(findLongest(test_arr));
+
+
+// Release 1 -----
+
+// Test TRUE
+var objOne = {name: "Steven", age: 55};
+var objTwo = {name: "Tamir", age: 55};
+
+console.log(findMatch(objOne, objTwo));
+
+
+// Test FALSE
+
+var objSeven = {animal: "Dog", legs: 4};
+var objEight = {animal: "Cat", legs: 3};
+
+console.log(findMatch(objSeven, objEight));
