@@ -11,7 +11,7 @@
     // add one to counter
 // return current longest
 
-
+//------
 
 // Release 1 : Find a Key-Value Match
 
@@ -23,8 +23,30 @@
   // otherwise,
     //return false
 
+//-----
+
+// Release 2: Generate Random Test Data
+
+//PSEUDOCODE for Release 2
+
+// create an empty container
+// create and set counter to zero
+// WHILE length of array is less than integer
+  //generate word of random length
+    //create an empty string for random word
+    //create a string of the alphabet
+    //create a randomn length between 1 and 10 like so: Math.floor(Math.random()*10) + 1
+    // WHILE length of random word is less than random length
+      //add a random letter from the alphabet to the random word
+  // add word to container
+  // add one to counter
+// return array
+
+
 
 // FUNCTIONS
+
+// Release 0 -----
 
 function findLongest(arr) {
   var current_longest = "";
@@ -38,7 +60,7 @@ function findLongest(arr) {
   return current_longest;
 }
 
-
+// Release 1 -----
 
 function findMatch(objOne,objTwo) {
 
