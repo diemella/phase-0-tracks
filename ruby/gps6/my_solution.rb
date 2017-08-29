@@ -92,3 +92,14 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+  # State names are strings, whereas population and population_density are symbols.
+# What does require_relative do? How is it different from require?
+  # require_relative links a file's info into the current document (kind of like copying and pasting the code from the other file into the current file), whereas require links to other pre-existing codes/info in libraries.
+# What are some ways to iterate through a hash?
+  # .each method (needs both key and value placeholder), .each_key method (needs placeholder for key only), and .each_value method (needs placeholder for value only)
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+  # Instance variables are available/accessible to all instance methods in the class.
+# What concept did you most solidify in this challenge?
+  # After this GPS, I feel I have a better understanding of scope. Also, I identify that I need to work on solidifying my understanding of how iterating through hashes.
