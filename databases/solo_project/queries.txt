@@ -2,10 +2,125 @@ Queries
 
 1. Display the information in one table (either table is fine).
 
+COMMAND:
+  SELECT * FROM cohorts;
+OUTPUT:
+  1|Red Pandas
+  2|Golden Bears
+  3|Fiery Tigers
+
 2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+COMMAND:
+  SELECT * FROM students;
+OUTPUT:
+  1|Diem Hoang|Austin|7|true|1
+  2|Temperance Bones|Chicago|10|true|2
+  3|Miso Quitter|New York|7|false|1
+  4|Dean McLaughlin|San Francisco|18|true|3
+
+COMMAND:
+  UPDATE students SET weeks_completed=8 WHERE id=1;
+OUTPUT:
+  none
+
+COMMAND:
+  SELECT * FROM students;
+OUTPUT:
+  1|Diem Hoang|Austin|8|true|1
+  2|Temperance Bones|Chicago|10|true|2
+  3|Miso Quitter|New York|7|false|1
+  4|Dean McLaughlin|San Francisco|18|true|3
 
 3. Display the information in both tables using one query.
 
+COMMAND:
+  SELECT * FROM students, cohorts WHERE students.cohort_id = cohorts.id;
+OUTPUT:
+  1|Diem Hoang|Austin|8|true|1|1|Red   Pandas
+  2|Temperance   Bones|Chicago|10|true|2|2|Golden Bears
+  3|Miso Quitter|New   York|7|false|1|1|Red Pandas
+  4|Dean McLaughlin|San Francisco|18|true|3|3|Fiery Tigers
+
 4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
 
+COMMAND:
+  SELECT students.name, cohorts.name FROM students JOIN cohorts ON students.cohort_id = cohorts.id;
+OUTPUT:
+  Diem Hoang|Red Pandas
+  Temperance Bones|Golden Bears
+  Miso Quitter|Red Pandas
+  Dean McLaughlin|Fiery Tigers
+
+COMMAND:
+  SELECT students.name, students.location, cohorts.name FROM students JOIN cohorts ON students.cohort_id = cohorts.id;
+OUTPUT:
+  Diem Hoang|Austin|Red Pandas
+  Temperance Bones|Chicago|Golden Bears
+  Miso Quitter|New York|Red Pandas
+  Dean McLaughlin|San Francisco|Fiery Tigers
+
+COMMAND:
+  SELECT cohorts.name, students.location, students.name FROM cohorts JOIN students ON cohorts.id = students.cohort_id;
+OUTPUT:
+  Red Pandas|Austin|Diem Hoang
+  Golden Bears|Chicago|Temperance Bones
+  Red Pandas|New York|Miso Quitter
+  Fiery Tigers|San Francisco|Dean McLaughlin
+
 5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+COMMAND:
+  SELECT * FROM students;
+OUTPUT:
+  1|Diem Hoang|Austin|8|true|1
+  2|Temperance Bones|Chicago|10|true|2
+  3|Miso Quitter|New York|7|false|1
+  4|Dean McLaughlin|San Francisco|18|true|3
+
+COMMAND:
+  DELETE FROM students WHERE weeks_completed=18;
+OUTPUT:
+  none
+
+COMMAND:
+  SELECT * FROM students;
+OUTPUT:
+1|Diem Hoang|Austin|8|true|1
+2|Temperance Bones|Chicago|10|true|2
+3|Miso Quitter|New York|7|false|1
+
+
+JOINS
+
+1. Left Join
+
+COMMAND:
+  SELECT students.name, cohorts.name FROM students LEFT JOIN cohorts ON students.cohort_id = cohorts.id;
+OUTPUT:
+Diem Hoang|Red Pandas
+Temperance Bones|Golden Bears
+Miso Quitter|Red Pandas
+
+2. Right Join
+
+COMMAND:
+  SELECT students.location, cohorts.name FROM students RIGHT JOIN cohorts ON students.cohort_id = cohorts.id;
+OUTPUT:
+  Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+3. Inner Join
+
+COMMAND:
+  SELECT students.name, cohorts.name FROM students INNER JOIN cohorts ON students.cohort_id = cohorts.id;
+OUTPUT:
+  Diem Hoang|Red Pandas
+  Temperance Bones|Golden Bears
+  Miso Quitter|Red Pandas
+
+4. Full Join
+
+COMMAND:
+  SELECT students.name, cohorts.name FROM students FULL JOIN cohorts ON students.cohort_id = cohorts.id;
+OUTPUT
+  Error: RIGHT and FULL OUTER JOINs are not currently supported
