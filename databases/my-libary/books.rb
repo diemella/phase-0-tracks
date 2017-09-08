@@ -91,3 +91,48 @@ end
 # remove_book(db, "Kite Runner")
 
 #display_books(db)
+
+# USER INTERFACE
+
+puts "Welcome to your library!"
+
+valid_input = false
+until valid_input
+
+  puts "What would you like to do?"
+  puts "-- Type 'add author' to add author."
+  puts "-- Type 'add book' to add book."
+  puts "-- Type 'remove' to remove book."
+  puts "-- Type 'display' to display books."
+  puts "-- Type 'quit' to quit program."
+
+  choice = gets.chomp
+
+  case choice
+    when 'add author'
+      puts "What is the author's first name?"
+      first_name = gets.chomp
+      puts "What is the author's last name?"
+      last_name = gets.chomp
+      add_author(db, first_name, last_name)
+    when 'add book'
+      puts "What is the title of the book you want to add?"
+      title = gets.chomp
+      puts "What is the first and last name of the author of this book?"
+      author_name = gets.chomp
+      add_book(db, title, author_name)
+    when 'remove'
+      puts "What is the title of the book you want to remove?"
+      title = gets.chomp
+      remove_book(db, title)
+    when 'display'
+      puts "Here is a list of books in your library:"
+      display_books(db)
+    when 'quit'
+      puts "See you next time! Remember -- keep learning."
+      valid_input = true
+    else
+      puts "Sorry -- I didn't understand you."
+  end
+
+end
