@@ -71,6 +71,14 @@ def remove_book(db, title)
   end
 end
 
+def display_books(db)
+  select_print = db.execute("SELECT title, first_name, last_name   FROM titles, authors WHERE author_id = authors.id")
+
+  select_print.each do |title, first, last|
+    puts " '#{title}' by #{first} #{last}"
+  end
+end
+
 # TEST CODE
 
 # add_author(db, "Jane", "Austen")
@@ -81,3 +89,5 @@ end
 
 # remove_book(db, "The Shining")
 # remove_book(db, "Kite Runner")
+
+#display_books(db)
