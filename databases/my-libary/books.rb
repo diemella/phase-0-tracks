@@ -62,6 +62,15 @@ def add_book(db, title, author_name)
   end
 end
 
+def remove_book(db, title)
+  titles = db.execute("SELECT title FROM titles")
+  if !titles.flatten.include? title
+    puts "Cannot remove -- #{title} is not on the list."
+  else
+    db.execute("DELETE FROM titles WHERE title=?", [title])
+  end
+end
+
 # TEST CODE
 
 # add_author(db, "Jane", "Austen")
@@ -69,3 +78,6 @@ end
 
 # add_book(db, "Pride and Prejudice", "Jane Austen")
 # add_book(db, "Kite Runner", "Khaled Hosseini")
+
+# remove_book(db, "The Shining")
+# remove_book(db, "Kite Runner")
