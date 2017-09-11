@@ -12,7 +12,7 @@ This open source operating system allows the user with unrestrictive power to do
 
 VPS hosting is like a mixture of shared hosting and dedicated hosting -- it has similar performance capability of a decidated server with a fraction of the price, and more control and flexibility than shared hosting.
 
-### What Are the Benefits of VPS Hosting?
+Advantages include:
 
 - affordability
 - scalability
