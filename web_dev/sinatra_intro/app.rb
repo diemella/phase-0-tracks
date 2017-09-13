@@ -62,3 +62,13 @@ end
 
 # http://localhost:9393/great_job?name=Diem
 # http://localhost:9393/great_job
+
+get '/add/:first_number/and/:second_number' do
+  first_number = params[:first_number]
+  second_number = params[:second_number]
+  result = first_number.to_i + second_number.to_i
+  # result = params[:first_number].to_i + params[:second_number].to_i
+  result.to_s
+end
+
+# http://localhost:9393/add/1/and/2
