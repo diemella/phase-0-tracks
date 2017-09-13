@@ -50,3 +50,15 @@ end
 get '/contact' do
   "We are located at:<br>1705 Guadalupe St. <br> Austin, TX 78701"
 end
+
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+# http://localhost:9393/great_job?name=Diem
+# http://localhost:9393/great_job
