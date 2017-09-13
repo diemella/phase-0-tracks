@@ -72,3 +72,18 @@ get '/add/:first_number/and/:second_number' do
 end
 
 # http://localhost:9393/add/1/and/2
+
+get '/name/:name' do
+  student = db.execute("SELECT * FROM students WHERE name=?", [params[:name]])
+  student.to_s
+end
+
+get '/campus/:campus' do
+  student = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
+  student.to_s
+end
+
+get '/age/:age' do
+  student = db.execute("SELECT * FROM students WHERE age=?", [params[:age]])
+  student.to_s
+end
